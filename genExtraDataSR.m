@@ -1,5 +1,5 @@
-function [CO2s_vals,occPatterns]=genExtraDataSR(T,p1,p2,p3,p4,p5,p6,hl,uco2,suco2,sigma)
-rng(1)
+function [CO2s_vals,occPatterns]=genExtraDataSR(T,p1,p2,p3,p4,p5,p6,hl,uco2,suco2,sigma,seed)
+rng(seed)
 occPatterns(1,1:T)=0;
 arrMat=[1-p1-p2,    p1,         p2;
     	p3,         1-p3-p4,    p4;

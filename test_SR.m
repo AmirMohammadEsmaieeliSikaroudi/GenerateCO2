@@ -11,13 +11,14 @@ p3=0.01;
 p4=0.001;
 p5=0.01;
 p6=0.01;
-[genExtraCO2,occPatterns]=genExtraDataSR(10000,p1,p2,p3,p4,p5,p6,hl,CO2_uocc,CO2_socc,sigma);
+seedNumber=1;
+[genExtraCO2,occPatterns]=genExtraDataSR(10000,p1,p2,p3,p4,p5,p6,hl,CO2_uocc,CO2_socc,sigma,seedNumber);
 figure(1)
 clf
 hold on
 plot(genExtraCO2)
 plot(occPatterns*20+CO2_uocc)
-
+title("Generated data based on old data")
 
 CO2_socc=385.8327;
 CO2_uocc=361.34;
@@ -29,9 +30,11 @@ p3=0.01;
 p4=0.001;
 p5=0.01;
 p6=0.01;
-[genExtraCO2,occPatterns]=genExtraDataSR(10000,p1,p2,p3,p4,p5,p6,hl,CO2_uocc,CO2_socc,sigma);
+seedNumber=1;
+[genExtraCO2,occPatterns]=genExtraDataSR(10000,p1,p2,p3,p4,p5,p6,hl,CO2_uocc,CO2_socc,sigma,seedNumber);
 figure(2)
 clf
 hold on
 plot(genExtraCO2)
 plot(occPatterns*20+CO2_uocc)
+title("Generated data based on new data")
